@@ -14,7 +14,7 @@ import scala.Console;
 
 public class BlockNoteGui extends GuiScreen {
 
-	private TileEntity TE;
+	private BlockNoteTileEntity TE;
 	public static World world = Minecraft.getMinecraft().world;
 	
 	public BlockNoteGui(BlockNoteTileEntity te) {
@@ -102,10 +102,10 @@ public class BlockNoteGui extends GuiScreen {
 	
 	public void initGui() {
 		
-		note = ((BlockNoteTileEntity) TE).getNote();
-		octave = ((BlockNoteTileEntity) TE).getOctave();
-		noteToPlay = ((BlockNoteTileEntity) TE).getNoteToPlay();
-		instrumentToPlay = ((BlockNoteTileEntity) TE).getInstrumentToPlay();
+		note = TE.getNote();
+		octave = TE.getOctave();
+		noteToPlay = TE.getNoteToPlay();
+		instrumentToPlay = TE.getInstrumentToPlay();
 		
 		buttonList.clear();
     	
@@ -171,12 +171,12 @@ public class BlockNoteGui extends GuiScreen {
     	
     	if(id > 127) {
     		octave = id - 129;
-    		((BlockNoteTileEntity) TE).setOctave(octave);
+    		TE.setOctave(octave);
     	}
 		
     	if (id < 12) {
     		note = id;
-    		((BlockNoteTileEntity) TE).setNote(note);
+    		TE.setNote(note);
     	}
     	
     	if (id == 12)
@@ -184,28 +184,28 @@ public class BlockNoteGui extends GuiScreen {
     		
     	if (id == 13) {
     		instrumentToPlay --;
-    		((BlockNoteTileEntity) TE).setInstrumentToPlay(instrumentToPlay);
+    		TE.setInstrumentToPlay(instrumentToPlay);
     	}
     	
     	if (id == 14) {
     		instrumentToPlay ++;
-    		((BlockNoteTileEntity) TE).setInstrumentToPlay(instrumentToPlay);
+    		TE.setInstrumentToPlay(instrumentToPlay);
     	}
     	
     	if (instrumentToPlay < 0) {
     		instrumentToPlay = 0;
-    		((BlockNoteTileEntity) TE).setInstrumentToPlay(instrumentToPlay);
+    		TE.setInstrumentToPlay(instrumentToPlay);
     	}
     	
     	if (instrumentToPlay > SoundsHandler.instrumentsAmount - 1) {
     		instrumentToPlay = SoundsHandler.instrumentsAmount - 1;
-			((BlockNoteTileEntity) TE).setInstrumentToPlay(instrumentToPlay);
+			TE.setInstrumentToPlay(instrumentToPlay);
     	}
     	
     	setInstrumentText ();
 
     	noteToPlay = note + (12 * (octave + 1));
-    	((BlockNoteTileEntity) TE).setNoteToPlay(noteToPlay);
+    	 TE.setNoteToPlay(noteToPlay);
     	
     	Console.println(noteToPlay);
     	Console.println(instrumentToPlay);

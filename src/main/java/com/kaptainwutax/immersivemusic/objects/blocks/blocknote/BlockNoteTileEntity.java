@@ -61,21 +61,6 @@ public class BlockNoteTileEntity extends TileEntity {
         
     }
     
-    private IBlockState getState() {
-    	
-        return world.getBlockState(this.pos);
-        
-    }
-    
-    private void sendUpdates() {
-    	
-        world.markBlockRangeForRenderUpdate(pos, pos);
-        world.notifyBlockUpdate(pos, getState(), getState(), 3);
-        world.scheduleBlockUpdate(pos,this.getBlockType(),0,0);
-        markDirty();
-        
-    }
-    
     //SET
     public void setNote(int enote) {
     	
