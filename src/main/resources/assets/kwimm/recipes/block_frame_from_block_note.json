@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+      	"A"
+
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "kwimm:block_note"
+        }
+
+    },
+        
+    "result":
+    {
+        "item": "kwimm:block_frame",
+        "count": 8
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+      	"BBB",
+        "BAB",
+        "BBB"          
+      
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "minecraft:noteblock"
+        },
+	
+	"B":
+        {
+            "item": "kwimm:block_frame"
+        }
+    },
+        
+    "result":
+    {
+        "item": "kwimm:block_note",
+        "count": 1
+    }
+}

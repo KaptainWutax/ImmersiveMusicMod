@@ -1,0 +1,61 @@
+{
+  "notes.violon_staccados.4c": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/4c"}]
+  },
+
+  "notes.violon_staccados.4c#": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/4c#"}]
+  },
+
+  "notes.violon_staccados.4d": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/4d"}]
+  },
+
+  "notes.violon_staccados.4d#": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/4d#"}]
+  },
+
+  "notes.violon_staccados.4e": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/4e"}]
+  },
+
+  "notes.violon_staccados.4f": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/4f"}]
+  },
+
+  "notes.violon_staccados.4f#": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/4f#"}]
+  },
+
+  "notes.violon_staccados.4g": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/4g"}]
+  },
+
+  "notes.violon_staccados.4g#": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/4g#"}]
+  },
+
+  "notes.violon_staccados.4a": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/4a"}]
+  },
+
+  "notes.violon_staccados.4a#": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/4a#"}]
+  },
+
+  "notes.violon_staccados.4b": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/4b"}]
+  }
+}
