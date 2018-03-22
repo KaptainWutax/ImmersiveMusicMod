@@ -101,6 +101,11 @@ public class BlockNote extends Block implements IHasModel, ITileEntityProvider {
 	    	return true;
 	    }
 
+	   public BlockPos getBlockPos () {
+		   
+		   return this.getBlockPos();
+		   
+	   }
 }
 	
 

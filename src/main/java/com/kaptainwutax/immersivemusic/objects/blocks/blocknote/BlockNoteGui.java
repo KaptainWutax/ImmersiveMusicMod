@@ -85,7 +85,14 @@ public class BlockNoteGui extends GuiScreen {
     GuiButton instrument;
     GuiButton instrument_increment;
     GuiButton instrument_decrement;
-    static String instrumentText = "Loading...";
+    
+    //texts
+    String instrumentText = "Loading...";
+    String noteText = "4C";
+    String noteToPlayText = "60";
+    String statusText = "Not Available";
+
+    
     
     final int INSTRUMENT = 12;
     final int INSTRUMENT_DECREMENT = 13;
@@ -95,6 +102,7 @@ public class BlockNoteGui extends GuiScreen {
     public void drawScreen(int mouseX, int mouseY, float partialTicks) {
        
     	drawDefaultBackground();
+    	setText();
         super.drawScreen(mouseX, mouseY, partialTicks);
        //org.lwjgl.input.Mouse.setGrabbed(false);
         
@@ -145,8 +153,9 @@ public class BlockNoteGui extends GuiScreen {
      	//instruments
      	buttonList.add(instrument_increment = new GuiButton(INSTRUMENT_INCREMENT, centerX - (0), 45, 20, noteButtonHeight, ">"));
      	buttonList.add(instrument_decrement = new GuiButton(INSTRUMENT_DECREMENT, centerX - (220), 45, 20, noteButtonHeight, "<"));
-     	setInstrumentText();
-     	
+    	
+     	setText();
+   
 		super.initGui();
 		
 	}
@@ -202,21 +211,20 @@ public class BlockNoteGui extends GuiScreen {
 			TE.setInstrumentToPlay(instrumentToPlay);
     	}
     	
-    	setInstrumentText ();
+    	setText();
 
     	noteToPlay = note + (12 * (octave + 1));
     	 TE.setNoteToPlay(noteToPlay);
-    	
-    	Console.println(noteToPlay);
-    	Console.println(instrumentToPlay);
     			
     	if (SoundsHandler.NOTE_SOUND[instrumentToPlay][noteToPlay] != null)
     		PlayNote(instrumentToPlay, noteToPlay);
  
     }
     
-	private void setInstrumentText() {
+	@SuppressWarnings("unlikely-arg-type")
+	private void setText() {
 		
+		//UPDATE INSTRUMENT TEXT
 		switch (instrumentToPlay) {
 		
 		case 0 : instrumentText = "Piano";
@@ -233,10 +241,71 @@ public class BlockNoteGui extends GuiScreen {
 		int centerX = (width / 2) - ((noteButtonWidth) / 2);
 	    int centerY = (height / 2) - ((noteButtonHeight) / 2);
 	    
-		if (buttonList.contains(instrument))
-			buttonList.remove(24);
+		if (buttonList.contains(instrumentText))
+			buttonList.remove(buttonList.indexOf(instrumentText));
 		
      	buttonList.add(instrument = new GuiButton(INSTRUMENT, centerX - (200), 45, 200, noteButtonHeight, instrumentText));
+     	
+     	//UPDATE NOTE TEXT
+     	switch (note) {
+		
+		case 0 : noteText = octave + " - C";
+			break;
+		
+		case 1 : noteText = octave + " - C#";
+			break;
+			
+		case 2 : noteText = octave + " - D";
+			break;
+			
+		case 3 : noteText = octave + " - D#";
+			break;
+		
+		case 4 : noteText = octave + " - E";
+			break;
+		
+		case 5 : noteText = octave + " - F";
+			break;
+		
+		case 6 : noteText = octave + " - F#";
+			break;
+		
+		case 7 : noteText = octave + " - G";
+			break;
+		
+		case 8 : noteText = octave + " - G#";
+			break;
+		
+		case 9 : noteText = octave + " - A";
+			break;
+		
+		case 10 : noteText = octave + " - A#";
+			break;
+			
+		case 11 : noteText = octave + " - B";
+			break;
+		
+		}
+   
+     	Console.println((noteText));
+     	
+     	//UPDATE NOTE TO PLAY TEXT
+     	noteToPlayText = "" + noteToPlay + "";
+     	
+     	//UPDATE STATUS TEXT
+     	if (SoundsHandler.NOTE_SOUND[instrumentToPlay][noteToPlay] == null) {
+    		
+     		statusText = "Not Available";
+     		
+     	} else {
+     		
+     		statusText = "Available";
+     		
+     	}
+     	
+     	fontRenderer.drawString(noteText, 200, 100, 0x0e7ab5);
+     	fontRenderer.drawString(noteToPlayText, 200, 110, 0x0e7ab5);
+     	fontRenderer.drawString(statusText, 200, 120, 0x0e7ab5);
 
 	}
 

@@ -86,7 +86,6 @@ public class BlockNoteTileEntity extends TileEntity {
     public void setInstrumentToPlay(int einstrumentToPlay) {
     	
     	instrumentToPlay = einstrumentToPlay;
-    	System.out.println(instrumentToPlay + "TEEEEEEEEEEEEEEEEEEEEEE");
     	markDirty();
     	
     }
