@@ -1,4 +1,4 @@
-package com.kaptainwutax.immersivemusic.objects.blocks.blocknote;
+package com.kaptainwutax.immersivemusic.objects.blocks.BlockNote;
 
 import javax.annotation.Nullable;
 
@@ -39,55 +39,61 @@ public class BlockNoteTileEntity extends TileEntity {
 	}
 	
 	@Override
-    @Nullable
-    public SPacketUpdateTileEntity getUpdatePacket() {
-		
-        return new SPacketUpdateTileEntity(this.pos, 3, this.getUpdateTag());
-        
-    }
+	@Nullable
+	public SPacketUpdateTileEntity getUpdatePacket() {
+		return new SPacketUpdateTileEntity(this.pos, 3, this.getUpdateTag());
+	}
 
-    @Override
-    public NBTTagCompound getUpdateTag() {
-    	
-        return this.writeToNBT(new NBTTagCompound());
-        
-    }
-    
-    @Override
-    public void onDataPacket(NetworkManager net, SPacketUpdateTileEntity pkt) {
-    	
-        super.onDataPacket(net, pkt);
-        handleUpdateTag(pkt.getNbtCompound());
-        
-    }
+	@Override
+	public NBTTagCompound getUpdateTag() {
+		return this.writeToNBT(new NBTTagCompound());
+	}
+	
+	@Override
+	public void onDataPacket(NetworkManager net, SPacketUpdateTileEntity pkt) {
+		super.onDataPacket(net, pkt);
+		handleUpdateTag(pkt.getNbtCompound());
+	}
+	
+	private IBlockState getState() {
+		return world.getBlockState(pos);
+	}
+	
+	private void markForUpdate() {
+		world.markBlockRangeForRenderUpdate(pos, pos);
+		world.notifyBlockUpdate(pos, getState(), getState(), 3);
+		world.scheduleBlockUpdate(pos,this.getBlockType(),0,0);
+		markDirty();
+	}
     
     //SET
     public void setNote(int enote) {
     	
     	note = enote;
-    	markDirty();
+    	//markDirty();
+    	markForUpdate();
     	
     }
     
     public void setNoteToPlay(int enoteToPlay) {
     	
     	noteToPlay = enoteToPlay;
-    	markDirty();
-    	
+    	//markDirty();
+    	markForUpdate();
     }
     
     public void setOctave(int eoctave) {
     	
     	octave = eoctave;
-    	markDirty();
-    	
+    	//markDirty();
+    	markForUpdate();
     }
     
     public void setInstrumentToPlay(int einstrumentToPlay) {
     	
     	instrumentToPlay = einstrumentToPlay;
-    	markDirty();
-    	
+    	//markDirty();
+    	markForUpdate();
     }
     
     //GET

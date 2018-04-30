@@ -1,4 +1,4 @@
-package com.kaptainwutax.immersivemusic.objects.blocks.blockmidi;
+package com.kaptainwutax.immersivemusic.objects.blocks.BlockMidi;
 
 import javax.sound.midi.MidiDevice;
 import javax.sound.midi.MidiMessage;
@@ -14,11 +14,9 @@ import net.minecraft.world.World;
 import scala.actors.UncaughtException;
 
 public class BlockMidiInput {
-	
-	private static World world = Minecraft.getMinecraft().world;
 
-	public MidiDevice input;
-    public static MidiDevice output;           
+    public static MidiDevice output;   
+    public static MidiDevice.Info[] devices;
  
     public static void start()  {
          
@@ -37,8 +35,6 @@ public class BlockMidiInput {
        }
    
        public static void init() {
- 
-           MidiDevice.Info[] devices;
  
            devices = MidiSystem.getMidiDeviceInfo();
  
@@ -88,7 +84,7 @@ public class BlockMidiInput {
               System.out.println(b[1] & 0xFF);
              
               if (SoundsHandler.NOTE_SOUND[1][b[1] & 0xFF] != null)
-            	  world.playSound(0F,0F,0F, SoundsHandler.NOTE_SOUND[1][b[1] & 0xFF], SoundCategory.AMBIENT, 1F, 1F, true);
+            	  Minecraft.getMinecraft().world.playSound(0F,0F,0F, SoundsHandler.NOTE_SOUND[1][b[1] & 0xFF], SoundCategory.AMBIENT, 1F, 1F, true);
              
              }             
              

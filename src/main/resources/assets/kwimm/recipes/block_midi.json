@@ -1,0 +1,35 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+      	"BCB",
+        "CAC",
+        "BCB"          
+      
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "minecraft:noteblock"
+        },
+	
+	   "B":
+        {
+            "item": "kwimm:block_frame"
+        },
+        
+       "C":
+        {
+            "item": "minecraft:comparator"
+        }
+    },
+        
+    "result":
+    {
+        "item": "kwimm:block_midi",
+        "count": 1
+    }
+}

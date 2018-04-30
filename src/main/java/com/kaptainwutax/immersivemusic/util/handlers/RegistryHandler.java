@@ -3,7 +3,8 @@ package com.kaptainwutax.immersivemusic.util.handlers;
 import com.kaptainwutax.immersivemusic.ImmersiveMusic;
 import com.kaptainwutax.immersivemusic.init.BlockInit;
 import com.kaptainwutax.immersivemusic.init.ItemInit;
-import com.kaptainwutax.immersivemusic.objects.blocks.blocknote.BlockNoteTileEntity;
+import com.kaptainwutax.immersivemusic.objects.blocks.BlockJukebox.BlockJukebox.BlockJukeboxTileEntity;
+import com.kaptainwutax.immersivemusic.objects.blocks.BlockNote.BlockNoteTileEntity;
 import com.kaptainwutax.immersivemusic.util.interfaces.IHasModel;
 
 import net.minecraft.block.Block;
@@ -28,6 +29,7 @@ public class RegistryHandler {
 		NetworkRegistry.INSTANCE.registerGuiHandler(ImmersiveMusic.instance, new GuiHandler());
 		SoundsHandler.registerSounds();
 		GameRegistry.registerTileEntity(BlockNoteTileEntity.class, "blocknote_TE");
+		GameRegistry.registerTileEntity(BlockJukeboxTileEntity.class, "blockjukebox_TE");
 	}
 	
 	public static void postInitRegistries()

@@ -1,4 +1,4 @@
-package com.kaptainwutax.immersivemusic.objects.blocks.blocknote;
+package com.kaptainwutax.immersivemusic.objects.blocks.BlockNote;
 
 import java.io.IOException;
 
@@ -7,19 +7,24 @@ import com.kaptainwutax.immersivemusic.util.handlers.SoundsHandler;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.SoundCategory;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import scala.Console;
 
 public class BlockNoteGui extends GuiScreen {
 
 	private BlockNoteTileEntity TE;
-	public static World world = Minecraft.getMinecraft().world;
+	private BlockPos blockPos;
+	private World world;
 	
-	public BlockNoteGui(BlockNoteTileEntity te) {
+	public BlockNoteGui(World world, BlockNoteTileEntity te, BlockPos blockPos) {
 
 	    this.TE = te;
+	    this.blockPos = blockPos;
+	    this.world = world;
 	    
 	}
 	
@@ -249,45 +254,43 @@ public class BlockNoteGui extends GuiScreen {
      	//UPDATE NOTE TEXT
      	switch (note) {
 		
-		case 0 : noteText = octave + " - C";
+		case 0 : noteText = octave + " C";
 			break;
 		
-		case 1 : noteText = octave + " - C#";
+		case 1 : noteText = octave + " C#";
 			break;
 			
-		case 2 : noteText = octave + " - D";
+		case 2 : noteText = octave + " D";
 			break;
 			
-		case 3 : noteText = octave + " - D#";
+		case 3 : noteText = octave + " D#";
 			break;
 		
-		case 4 : noteText = octave + " - E";
+		case 4 : noteText = octave + " E";
 			break;
 		
-		case 5 : noteText = octave + " - F";
+		case 5 : noteText = octave + " F";
 			break;
 		
-		case 6 : noteText = octave + " - F#";
+		case 6 : noteText = octave + " F#";
 			break;
 		
-		case 7 : noteText = octave + " - G";
+		case 7 : noteText = octave + " G";
 			break;
 		
-		case 8 : noteText = octave + " - G#";
+		case 8 : noteText = octave + " G#";
 			break;
 		
-		case 9 : noteText = octave + " - A";
+		case 9 : noteText = octave + " A";
 			break;
 		
-		case 10 : noteText = octave + " - A#";
+		case 10 : noteText = octave + " A#";
 			break;
 			
-		case 11 : noteText = octave + " - B";
+		case 11 : noteText = octave + " B";
 			break;
 		
 		}
-   
-     	Console.println((noteText));
      	
      	//UPDATE NOTE TO PLAY TEXT
      	noteToPlayText = "" + noteToPlay + "";
@@ -296,22 +299,24 @@ public class BlockNoteGui extends GuiScreen {
      	if (SoundsHandler.NOTE_SOUND[instrumentToPlay][noteToPlay] == null) {
     		
      		statusText = "Not Available";
+     	   	fontRenderer.drawString(noteText, 65, 72, 0x747c83);
+         	fontRenderer.drawString(noteToPlayText, 115, 72, 0x747c83);
+         	fontRenderer.drawString(statusText, 165, 72, 0x747c83);
      		
      	} else {
      		
      		statusText = "Available";
+        	fontRenderer.drawString(noteText, 65, 72, 0x0e7ab5);
+         	fontRenderer.drawString(noteToPlayText, 115, 72, 0x3157a9);
+         	fontRenderer.drawString(statusText, 165, 72, 0x55b8b8);
      		
      	}
      	
-     	fontRenderer.drawString(noteText, 200, 100, 0x0e7ab5);
-     	fontRenderer.drawString(noteToPlayText, 200, 110, 0x0e7ab5);
-     	fontRenderer.drawString(statusText, 200, 120, 0x0e7ab5);
-
 	}
 
-	public static void PlayNote(int instrument, int note) {
+	public void PlayNote(int instrument, int note) {
 		
-		world.playSound(0F,0F,0F, SoundsHandler.NOTE_SOUND[instrument][note], SoundCategory.AMBIENT, 1F, 1F, true);
+		world.playSound(blockPos.getX(), blockPos.getY(), blockPos.getZ(), SoundsHandler.NOTE_SOUND[instrument][note], SoundCategory.AMBIENT, 1F, 1F, true);
 		
 	}
 

@@ -3,9 +3,9 @@
     
     "pattern":
     [
-      	"BBB",
-        "BAB",
-        "BBB"          
+      	"BCB",
+        "CAC",
+        "BCB"          
       
     ],
     
@@ -16,9 +16,14 @@
             "item": "minecraft:noteblock"
         },
 	
-	"B":
+	   "B":
         {
             "item": "kwimm:block_frame"
+        },
+        
+       "C":
+        {
+            "item": "minecraft:redstone"
         }
     },
         

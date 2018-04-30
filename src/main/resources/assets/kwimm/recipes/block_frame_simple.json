@@ -11,17 +11,17 @@
     
     "key":
     {
-        "A":
+       "A":
         {
             "item": "minecraft:redstone"
         },
 	
-	"B":
+	   "B":
         {
             "item": "minecraft:iron_nugget"
         },
 
-	"C":
+	   "C":
         {
             "item": "minecraft:iron_ingot"
         }

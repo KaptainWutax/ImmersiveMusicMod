@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "kwimm:block_midi"}
+    }
+}

@@ -1,4 +1,29 @@
 {
+  "notes.violon_staccados.3g": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/3g"}]
+  },
+
+  "notes.violon_staccados.3g#": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/3g#"}]
+  },
+
+  "notes.violon_staccados.3a": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/3a"}]
+  },
+
+  "notes.violon_staccados.3a#": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/3a#"}]
+  },
+
+  "notes.violon_staccados.3b": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/3b"}]
+  },
+
   "notes.violon_staccados.4c": {
     "category": "block",
     "sounds": [{"name" : "kwimm:notes/violon_staccados/4c"}]
@@ -57,5 +82,176 @@
   "notes.violon_staccados.4b": {
     "category": "block",
     "sounds": [{"name" : "kwimm:notes/violon_staccados/4b"}]
+  },
+
+  "notes.violon_staccados.5c": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/5c"}]
+  },
+
+  "notes.violon_staccados.5c#": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/5c#"}]
+  },
+
+  "notes.violon_staccados.5d": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/5d"}]
+  },
+
+  "notes.violon_staccados.5d#": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/5d#"}]
+  },
+
+  "notes.violon_staccados.5e": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/5e"}]
+  },
+
+  "notes.violon_staccados.5f": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/5f"}]
+  },
+
+  "notes.violon_staccados.5f#": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/5f#"}]
+  },
+
+  "notes.violon_staccados.5g": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/5g"}]
+  },
+
+  "notes.violon_staccados.5g#": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/5g#"}]
+  },
+
+  "notes.violon_staccados.5a": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/5a"}]
+  },
+
+  "notes.violon_staccados.5a#": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/5a#"}]
+  },
+
+  "notes.violon_staccados.5b": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/5b"}]
+  },
+
+  "notes.violon_staccados.6c": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/6c"}]
+  },
+
+  "notes.violon_staccados.6c#": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/6c#"}]
+  },
+
+  "notes.violon_staccados.6d": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/6d"}]
+  },
+
+  "notes.violon_staccados.6d#": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/6d#"}]
+  },
+
+  "notes.violon_staccados.6e": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/6e"}]
+  },
+
+  "notes.violon_staccados.6f": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/6f"}]
+  },
+
+  "notes.violon_staccados.6f#": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/6f#"}]
+  },
+
+  "notes.violon_staccados.6g": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/6g"}]
+  },
+
+  "notes.violon_staccados.6g#": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/6g#"}]
+  },
+
+  "notes.violon_staccados.6a": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/6a"}]
+  },
+
+  "notes.violon_staccados.6a#": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/6a#"}]
+  },
+
+  "notes.violon_staccados.6b": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/6b"}]
+  },
+
+  "notes.violon_staccados.7c": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/7c"}]
+  },
+
+  "notes.violon_staccados.7c#": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/7c#"}]
+  },
+
+  "notes.violon_staccados.7d": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/7d"}]
+  },
+
+  "notes.violon_staccados.7d#": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/7d#"}]
+  },
+
+  "notes.violon_staccados.7e": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/7e"}]
+  },
+
+  "notes.violon_staccados.7f": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/7f"}]
+  },
+
+  "notes.violon_staccados.7f#": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/7f#"}]
+  },
+
+  "notes.violon_staccados.7g": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/7g"}]
+  },
+
+  "notes.violon_staccados.7g#": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/7g#"}]
+  },
+
+  "notes.violon_staccados.7a": {
+    "category": "block",
+    "sounds": [{"name" : "kwimm:notes/violon_staccados/7a"}]
   }
+
 }
