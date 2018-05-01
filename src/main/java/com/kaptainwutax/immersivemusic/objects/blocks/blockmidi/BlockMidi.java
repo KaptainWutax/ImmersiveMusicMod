@@ -6,7 +6,6 @@ import com.kaptainwutax.immersivemusic.ImmersiveMusic;
 import com.kaptainwutax.immersivemusic.init.BlockInit;
 import com.kaptainwutax.immersivemusic.init.ItemInit;
 import com.kaptainwutax.immersivemusic.util.handlers.GuiHandler;
-import com.kaptainwutax.immersivemusic.util.interfaces.IHasModel;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -23,7 +22,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class BlockMidi extends Block implements IHasModel {
+public class BlockMidi extends Block {
 
 	public BlockMidi(String name, Material materialIn) {
 		
@@ -39,13 +38,9 @@ public class BlockMidi extends Block implements IHasModel {
 		setRegistryName(name);
 		setCreativeTab(CreativeTabs.MISC);
 		
-		BlockInit.BLOCKS.add(this);
-		ItemInit.ITEMS.add(new ItemBlock(this).setRegistryName(this.getRegistryName()));
-		
 	}
 
-	@Override
-	public void registerModels() {
+	public void registerItemModels() {
 		
 		ImmersiveMusic.proxy.registerItemRenderer(Item.getItemFromBlock(this), 0, "inventory");
 		

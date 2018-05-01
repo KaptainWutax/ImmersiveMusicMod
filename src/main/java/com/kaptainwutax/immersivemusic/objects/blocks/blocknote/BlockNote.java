@@ -7,7 +7,6 @@ import com.kaptainwutax.immersivemusic.init.BlockInit;
 import com.kaptainwutax.immersivemusic.init.ItemInit;
 import com.kaptainwutax.immersivemusic.util.handlers.GuiHandler;
 import com.kaptainwutax.immersivemusic.util.handlers.SoundsHandler;
-import com.kaptainwutax.immersivemusic.util.interfaces.IHasModel;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
@@ -32,7 +31,7 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import scala.Console;
 
-public class BlockNote extends Block implements IHasModel, ITileEntityProvider {
+public class BlockNote extends Block implements ITileEntityProvider {
 	
 	public BlockNote(String name, Material materialIn) {
 		
@@ -48,13 +47,9 @@ public class BlockNote extends Block implements IHasModel, ITileEntityProvider {
 		setRegistryName(name);
 		setCreativeTab(CreativeTabs.MISC);
 		
-		BlockInit.BLOCKS.add(this);
-		ItemInit.ITEMS.add(new ItemBlock(this).setRegistryName(this.getRegistryName()));
-		
 	}
 
-	@Override
-	public void registerModels() {
+	public void registerItemModels() {
 		
 		ImmersiveMusic.proxy.registerItemRenderer(Item.getItemFromBlock(this), 0, "inventory");
 		
