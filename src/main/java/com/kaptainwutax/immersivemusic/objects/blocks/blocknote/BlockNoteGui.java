@@ -316,7 +316,7 @@ public class BlockNoteGui extends GuiScreen {
 
 	public void PlayNote(int instrument, int note) {
 		
-		world.playSound(blockPos.getX(), blockPos.getY(), blockPos.getZ(), SoundsHandler.NOTE_SOUND[instrument][note], SoundCategory.AMBIENT, 1F, 1F, true);
+		world.playSound(blockPos.getX(), blockPos.getY(), blockPos.getZ(), SoundsHandler.NOTE_SOUND[instrument][note], SoundCategory.BLOCKS, 1F, 1F, false);
 		
 	}
 

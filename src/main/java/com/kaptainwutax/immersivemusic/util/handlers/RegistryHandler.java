@@ -15,6 +15,7 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.relauncher.Side;
 
 @EventBusSubscriber
 public class RegistryHandler {
@@ -24,6 +25,7 @@ public class RegistryHandler {
 	}
 	
 	public static void initRegistries() {
+		PacketHandler.registerMessages("kwimm");
 		NetworkRegistry.INSTANCE.registerGuiHandler(ImmersiveMusic.instance, new GuiHandler());
 		GameRegistry.registerTileEntity(BlockNoteTileEntity.class, "blocknote_TE");
 	}

@@ -7,6 +7,7 @@ import javax.sound.midi.MidiMessage;
 import javax.sound.midi.MidiDevice.Info;
 
 import com.kaptainwutax.immersivemusic.objects.blocks.BlockNote.BlockNoteTileEntity;
+import com.kaptainwutax.immersivemusic.util.handlers.PacketHandler;
 import com.kaptainwutax.immersivemusic.util.handlers.SoundsHandler;
 
 import javax.sound.midi.MidiSystem;
@@ -193,10 +194,15 @@ public class BlockMidiGui extends GuiScreen {
      	
           if((b[0] & 0xFF) == 144) {
            //System.out.println(b[1] & 0xFF);
-          
-           if (SoundsHandler.NOTE_SOUND[1][b[1] & 0xFF] != null)
-         	  Minecraft.getMinecraft().world.playSound(blockPos.getX(), blockPos.getY(), blockPos.getZ(), SoundsHandler.NOTE_SOUND[1][b[1] & 0xFF], SoundCategory.AMBIENT, 1F, 1F, false);
-          
+
+           if (SoundsHandler.NOTE_SOUND[1][b[1] & 0xFF] != null) {
+        	   Minecraft.getMinecraft().addScheduledTask(() -> {
+                   Minecraft.getMinecraft().world.playSound(blockPos.getX(), blockPos.getY(), blockPos.getZ(), SoundsHandler.NOTE_SOUND[1][b[1] & 0xFF], SoundCategory.BLOCKS, 1F, 1F, false);
+        		 });
+               PacketHandler.INSTANCE.sendToServer(new BlockMidiPacket(blockPos, 1, b[1] & 0xFF));
+
+           }
+           
           }             
           rcvr.send(message, timeStamp);
 
