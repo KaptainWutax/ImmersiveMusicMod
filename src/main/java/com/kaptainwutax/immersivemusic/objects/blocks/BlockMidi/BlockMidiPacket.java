@@ -24,7 +24,7 @@ public class BlockMidiPacket implements IMessage {
 		
 		this.pos = pos;
 		this.instrument = instrument;
-		this.noteToPlay= noteToPlay;
+		this.noteToPlay = noteToPlay;
 		
 	}
 	

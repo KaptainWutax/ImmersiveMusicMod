@@ -2,6 +2,8 @@ package com.kaptainwutax.immersivemusic.util.handlers;
 
 import com.kaptainwutax.immersivemusic.objects.blocks.BlockMidi.BlockMidiPacket;
 import com.kaptainwutax.immersivemusic.objects.blocks.BlockMidi.BlockMidiPacket.BlockMidiPacketHandler;
+import com.kaptainwutax.immersivemusic.objects.blocks.BlockNote.BlockNotePacket;
+import com.kaptainwutax.immersivemusic.objects.blocks.BlockNote.BlockNotePacket.BlockNotePacketHandler;
 
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
@@ -26,7 +28,8 @@ public class PacketHandler {
 	 }
 
 	 private static void registerMessages() {
-		 INSTANCE.registerMessage(BlockMidiPacketHandler.class, BlockMidiPacket.class, 1, Side.SERVER);
+		 INSTANCE.registerMessage(BlockMidiPacketHandler.class, BlockMidiPacket.class, 0, Side.SERVER);
+		 INSTANCE.registerMessage(BlockNotePacketHandler.class, BlockNotePacket.class, 1, Side.SERVER);
 	 }	 
 	    
 }

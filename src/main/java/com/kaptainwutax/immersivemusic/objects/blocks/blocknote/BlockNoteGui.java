@@ -2,6 +2,8 @@ package com.kaptainwutax.immersivemusic.objects.blocks.BlockNote;
 
 import java.io.IOException;
 
+import com.kaptainwutax.immersivemusic.objects.blocks.BlockMidi.BlockMidiPacket;
+import com.kaptainwutax.immersivemusic.util.handlers.PacketHandler;
 import com.kaptainwutax.immersivemusic.util.handlers.SoundsHandler;
 
 import net.minecraft.client.Minecraft;
@@ -223,6 +225,8 @@ public class BlockNoteGui extends GuiScreen {
     			
     	if (SoundsHandler.NOTE_SOUND[instrumentToPlay][noteToPlay] != null)
     		PlayNote(instrumentToPlay, noteToPlay);
+    	
+    	PacketHandler.INSTANCE.sendToServer(new BlockNotePacket(note, octave, noteToPlay, instrumentToPlay, TE.getPos()));
  
     }
     

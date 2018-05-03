@@ -107,11 +107,11 @@ public class BlockNote extends Block implements ITileEntityProvider {
 	    	if (worldIn.isBlockPowered(pos)) {
 	        	
 	    		BlockNoteTileEntity TE = (BlockNoteTileEntity) worldIn.getTileEntity(pos);
-	        	Console.print("POWERED!!!" + worldIn.isRemote);
-	        	Console.print(TE.getNoteToPlay());
+	        	//Console.print("POWERED!!!" + worldIn.isRemote);
+	        	//Console.print(TE.getNoteToPlay());
 	        	
 	        	if (!worldIn.isRemote)
-	        		worldIn.playSound(pos.getX(), pos.getY(), pos.getZ(), SoundsHandler.NOTE_SOUND[TE.getInstrumentToPlay()][TE.getNoteToPlay()], SoundCategory.AMBIENT, 1F, 1F, true);
+	        		worldIn.playSound(pos.getX(), pos.getY(), pos.getZ(), SoundsHandler.NOTE_SOUND[TE.getInstrumentToPlay()][TE.getNoteToPlay()], SoundCategory.BLOCKS, 1F, 1F, true);
 	        
 	        }
 	        
