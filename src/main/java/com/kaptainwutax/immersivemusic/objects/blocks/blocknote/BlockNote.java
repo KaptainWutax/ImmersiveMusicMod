@@ -6,6 +6,7 @@ import com.kaptainwutax.immersivemusic.ImmersiveMusic;
 import com.kaptainwutax.immersivemusic.init.BlockInit;
 import com.kaptainwutax.immersivemusic.init.ItemInit;
 import com.kaptainwutax.immersivemusic.util.handlers.GuiHandler;
+import com.kaptainwutax.immersivemusic.util.handlers.PacketHandler;
 import com.kaptainwutax.immersivemusic.util.handlers.SoundsHandler;
 
 import net.minecraft.block.Block;
@@ -104,16 +105,19 @@ public class BlockNote extends Block implements ITileEntityProvider {
 	   @Override
 	   public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos fromPos) {
 	        
-	    	if (worldIn.isBlockPowered(pos)) {
-	        	
-	    		BlockNoteTileEntity TE = (BlockNoteTileEntity) worldIn.getTileEntity(pos);
-	        	//Console.print("POWERED!!!" + worldIn.isRemote);
-	        	//Console.print(TE.getNoteToPlay());
-	        	
-	        	if (!worldIn.isRemote)
-	        		worldIn.playSound(pos.getX(), pos.getY(), pos.getZ(), SoundsHandler.NOTE_SOUND[TE.getInstrumentToPlay()][TE.getNoteToPlay()], SoundCategory.BLOCKS, 1F, 1F, true);
-	        
-	        }
+		   if (worldIn.isBlockPowered(pos)) {
+			   
+	    	 BlockNoteTileEntity TE = (BlockNoteTileEntity) worldIn.getTileEntity(pos);	
+	    	 
+	    	 Console.println(TE.getNote() + "  " + TE.getOctave() + "  " + TE.getNoteToPlay() + "  " + TE.getInstrumentToPlay() + "  " + TE.getPos());
+	    	 
+		  	 Minecraft.getMinecraft().addScheduledTask(() -> {   	
+	         PacketHandler.INSTANCE.sendToServer(new BlockNotePacket(TE.getNote(), TE.getOctave(), TE.getNoteToPlay(), TE.getInstrumentToPlay(), TE.getPos(), true));		        	
+		  	 });
+		  	 
+	    	 worldIn.playSound(pos.getX(), pos.getY(), pos.getZ(), SoundsHandler.NOTE_SOUND[TE.getInstrumentToPlay()][TE.getNoteToPlay()], SoundCategory.BLOCKS, 1F, 1F, false);
+	    	 
+		   }
 	        
 	  }  
 	   

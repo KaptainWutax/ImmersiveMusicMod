@@ -21,15 +21,17 @@ public class BlockNotePacket implements IMessage {
 	int noteToPlay;
 	int instrumentToPlay;
 	BlockPos pos;
+	Boolean playSound;
 
 	public BlockNotePacket() {}
-	public BlockNotePacket(int note, int octave, int instrument, int noteToPlay, BlockPos pos) {
+	public BlockNotePacket(int note, int octave, int noteToPlay, int instrumentToPlay, BlockPos pos, Boolean playSound) {
 		
 		this.note = note;
 		this.octave = octave;
 		this.noteToPlay = noteToPlay;
-		this.instrumentToPlay = instrument;
+		this.instrumentToPlay = instrumentToPlay;
 		this.pos = pos;
+		this.playSound = playSound;
 		
 	}
 	
@@ -41,6 +43,7 @@ public class BlockNotePacket implements IMessage {
 		noteToPlay = buf.readInt();
 		instrumentToPlay = buf.readInt();
 		pos = new BlockPos(buf.readInt(), buf.readInt(), buf.readInt());
+		playSound = buf.readBoolean();
 		
 	}
 
@@ -54,6 +57,7 @@ public class BlockNotePacket implements IMessage {
 		buf.writeInt(pos.getX());
         buf.writeInt(pos.getY());
         buf.writeInt(pos.getZ());
+        buf.writeBoolean(playSound);
 		
 	}
 	
@@ -64,14 +68,15 @@ public class BlockNotePacket implements IMessage {
 			
 			EntityPlayerMP player = ctx.getServerHandler().player;
 			WorldServer world = player.getServerWorld();
-			BlockNoteTileEntity TE = (BlockNoteTileEntity)world.getTileEntity(message.pos);
 				
 			if(world.getTileEntity(message.pos) instanceof BlockNoteTileEntity)
 				world.addScheduledTask(() -> {
+					BlockNoteTileEntity TE = (BlockNoteTileEntity)world.getTileEntity(message.pos);
 					TE.setNote(message.note);
 					TE.setOctave(message.octave);
 					TE.setNoteToPlay(message.noteToPlay);
-					TE.setInstrumentToPlay(message.instrumentToPlay);				
+					TE.setInstrumentToPlay(message.instrumentToPlay);	
+					if(message.playSound) {world.playSound(message.pos.getX(), message.pos.getY(), message.pos.getZ(), SoundsHandler.NOTE_SOUND[TE.getInstrumentToPlay()][TE.getNoteToPlay()], SoundCategory.BLOCKS, 1F, 1F, false);}
 				});
 			return null;
 			

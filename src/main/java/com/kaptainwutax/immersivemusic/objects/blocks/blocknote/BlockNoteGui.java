@@ -11,6 +11,7 @@ import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.IThreadListener;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -107,7 +108,7 @@ public class BlockNoteGui extends GuiScreen {
 	
 	@Override
     public void drawScreen(int mouseX, int mouseY, float partialTicks) {
-       
+
     	drawDefaultBackground();
     	setText();
         super.drawScreen(mouseX, mouseY, partialTicks);
@@ -160,8 +161,6 @@ public class BlockNoteGui extends GuiScreen {
      	//instruments
      	buttonList.add(instrument_increment = new GuiButton(INSTRUMENT_INCREMENT, centerX - (0), 45, 20, noteButtonHeight, ">"));
      	buttonList.add(instrument_decrement = new GuiButton(INSTRUMENT_DECREMENT, centerX - (220), 45, 20, noteButtonHeight, "<"));
-    	
-     	setText();
    
 		super.initGui();
 		
@@ -219,14 +218,16 @@ public class BlockNoteGui extends GuiScreen {
     	}
     	
     	setText();
-
     	noteToPlay = note + (12 * (octave + 1));
-    	 TE.setNoteToPlay(noteToPlay);
-    			
-    	if (SoundsHandler.NOTE_SOUND[instrumentToPlay][noteToPlay] != null)
-    		PlayNote(instrumentToPlay, noteToPlay);
+    	TE.setNoteToPlay(noteToPlay);
     	
-    	PacketHandler.INSTANCE.sendToServer(new BlockNotePacket(note, octave, noteToPlay, instrumentToPlay, TE.getPos()));
+    	 Minecraft.getMinecraft().addScheduledTask(() -> {
+    		 PacketHandler.INSTANCE.sendToServer(new BlockNotePacket(TE.getNote(), TE.getOctave(), TE.getNoteToPlay(), TE.getInstrumentToPlay(), TE.getPos(), false));
+    		 
+    	 });
+        	if (SoundsHandler.NOTE_SOUND[instrumentToPlay][noteToPlay] != null)
+        		PlayNote(instrumentToPlay, noteToPlay);
+  
  
     }
     
