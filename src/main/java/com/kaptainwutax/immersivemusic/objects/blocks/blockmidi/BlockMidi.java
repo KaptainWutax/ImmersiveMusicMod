@@ -1,28 +1,29 @@
-package com.kaptainwutax.immersivemusic.objects.blocks.BlockMidi;
+package com.kaptainwutax.immersivemusic.objects.blocks.blockmidi;
 
 import java.util.Random;
 
 import com.kaptainwutax.immersivemusic.ImmersiveMusic;
 import com.kaptainwutax.immersivemusic.init.BlockInit;
-import com.kaptainwutax.immersivemusic.init.ItemInit;
 import com.kaptainwutax.immersivemusic.util.handlers.GuiHandler;
+import com.kaptainwutax.immersivemusic.util.handlers.PacketHandler;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class BlockMidi extends Block {
+public class BlockMidi extends Block implements ITileEntityProvider {
 
 	public BlockMidi(String name, Material materialIn) {
 		
@@ -68,10 +69,17 @@ public class BlockMidi extends Block {
 		
 	}
 	
+	@Override
+	public TileEntity createNewTileEntity(World worldIn, int meta) {
+
+		return new BlockMidiTileEntity();
+		
+	}
+	
 	//CUSTOM
 	   @Override
-	    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing side, float hitX, float hitY, float hitZ) {
-	        
+	    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing side, float hitX, float hitY, float hitZ) {  		   
+		   
 	    	if (worldIn.isRemote) {
 	           
 	    		playerIn.openGui(ImmersiveMusic.instance, GuiHandler.BLOCK_MIDI, worldIn, pos.getX(), pos.getY(), pos.getZ());
@@ -84,5 +92,25 @@ public class BlockMidi extends Block {
 	        
 	    	return true;
 	    }
+	   
+	   @Override
+	   public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos fromPos) {
+	      
+		   boolean flag = worldIn.isBlockPowered(pos);
+		   BlockMidiTileEntity TE = (BlockMidiTileEntity) worldIn.getTileEntity(pos);	  
+		   
+		   if (TE.getPowered() != flag) {
+			   
+			   if(!worldIn.isRemote && flag) {
+				   	PacketHandler.INSTANCE.sendToServer(new BlockMidiPacket(pos, TE.getInstrumentToPlay(), 1000, TE.getVolume(), TE.getSpeed(), true));
+			   		PacketHandler.INSTANCE.sendToServer(new BlockMidiReadThreadPacket(TE.getPos()));	    	 	  
+			   } else {
+				   PacketHandler.INSTANCE.sendToServer(new BlockMidiPacket(pos, TE.getInstrumentToPlay(), 1000, TE.getVolume(), TE.getSpeed(), false));
+			   }
+			   
+			   TE.setPowered(flag);
+		   } 				   
+ 
+	  }  
 	
 }

@@ -1,27 +1,21 @@
-package com.kaptainwutax.immersivemusic.objects.blocks.BlockNote;
+package com.kaptainwutax.immersivemusic.objects.blocks.blocknote;
 
 import java.util.Random;
 
 import com.kaptainwutax.immersivemusic.ImmersiveMusic;
 import com.kaptainwutax.immersivemusic.init.BlockInit;
-import com.kaptainwutax.immersivemusic.init.ItemInit;
 import com.kaptainwutax.immersivemusic.util.handlers.GuiHandler;
-import com.kaptainwutax.immersivemusic.util.handlers.PacketHandler;
 import com.kaptainwutax.immersivemusic.util.handlers.SoundsHandler;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.state.BlockFaceShape;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.inventory.GuiInventory;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
@@ -30,7 +24,6 @@ import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import scala.Console;
 
 public class BlockNote extends Block implements ITileEntityProvider {
 	
@@ -105,19 +98,21 @@ public class BlockNote extends Block implements ITileEntityProvider {
 	   @Override
 	   public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos fromPos) {
 	        
-		   if (worldIn.isBlockPowered(pos)) {
-			   
-	    	 BlockNoteTileEntity TE = (BlockNoteTileEntity) worldIn.getTileEntity(pos);	
-	    	 
-	    	 Console.println(TE.getNote() + "  " + TE.getOctave() + "  " + TE.getNoteToPlay() + "  " + TE.getInstrumentToPlay() + "  " + TE.getPos());
-	    	 
-		  	 Minecraft.getMinecraft().addScheduledTask(() -> {   	
-	         PacketHandler.INSTANCE.sendToServer(new BlockNotePacket(TE.getNote(), TE.getOctave(), TE.getNoteToPlay(), TE.getInstrumentToPlay(), TE.getPos(), true));		        	
-		  	 });
+		   boolean flag = worldIn.isBlockPowered(pos);
+		   BlockNoteTileEntity TE = (BlockNoteTileEntity) worldIn.getTileEntity(pos);	  
+		   
+		   if (TE.getPowered() != flag) {		   			   
 		  	 
-	    	 worldIn.playSound(pos.getX(), pos.getY(), pos.getZ(), SoundsHandler.NOTE_SOUND[TE.getInstrumentToPlay()][TE.getNoteToPlay()], SoundCategory.BLOCKS, 1F, 1F, false);
+	    	 if(!worldIn.isRemote && flag && SoundsHandler.NOTE_SOUND[TE.getInstrumentToPlay()][TE.getNoteToPlay()] != null) {
+	    		 Minecraft.getMinecraft().addScheduledTask(() -> {
+	    			 worldIn.playSound(null, pos.getX(), pos.getY(), pos.getZ(), SoundsHandler.NOTE_SOUND[TE.getInstrumentToPlay()][TE.getNoteToPlay()], SoundCategory.RECORDS, TE.getVolume(), 1F);	    			 
+	    		 });
+	    	
+	    	 }
 	    	 
-		   }
+	    	 TE.setPowered(flag);
+	    		
+		   }		   
 	        
 	  }  
 	   

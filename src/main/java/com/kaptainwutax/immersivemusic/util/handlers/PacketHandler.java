@@ -1,9 +1,13 @@
 package com.kaptainwutax.immersivemusic.util.handlers;
 
-import com.kaptainwutax.immersivemusic.objects.blocks.BlockMidi.BlockMidiPacket;
-import com.kaptainwutax.immersivemusic.objects.blocks.BlockMidi.BlockMidiPacket.BlockMidiPacketHandler;
-import com.kaptainwutax.immersivemusic.objects.blocks.BlockNote.BlockNotePacket;
-import com.kaptainwutax.immersivemusic.objects.blocks.BlockNote.BlockNotePacket.BlockNotePacketHandler;
+import com.kaptainwutax.immersivemusic.objects.blocks.blockmidi.BlockMidiPacket;
+import com.kaptainwutax.immersivemusic.objects.blocks.blockmidi.BlockMidiPacket.BlockMidiPacketHandler;
+import com.kaptainwutax.immersivemusic.objects.blocks.blockmidi.BlockMidiReadThreadPacket;
+import com.kaptainwutax.immersivemusic.objects.blocks.blockmidi.BlockMidiReadThreadPacket.BlockMidiReadThreadPacketHandler;
+import com.kaptainwutax.immersivemusic.objects.blocks.blockmidi.BlockMidiWriteThreadPacket;
+import com.kaptainwutax.immersivemusic.objects.blocks.blockmidi.BlockMidiWriteThreadPacket.BlockMidiWriteThreadPacketHandler;
+import com.kaptainwutax.immersivemusic.objects.blocks.blocknote.BlockNotePacket;
+import com.kaptainwutax.immersivemusic.objects.blocks.blocknote.BlockNotePacket.BlockNotePacketHandler;
 
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
@@ -30,6 +34,8 @@ public class PacketHandler {
 	 private static void registerMessages() {
 		 INSTANCE.registerMessage(BlockMidiPacketHandler.class, BlockMidiPacket.class, 0, Side.SERVER);
 		 INSTANCE.registerMessage(BlockNotePacketHandler.class, BlockNotePacket.class, 1, Side.SERVER);
+		 INSTANCE.registerMessage(BlockMidiWriteThreadPacketHandler.class, BlockMidiWriteThreadPacket.class, 2, Side.SERVER);
+		 INSTANCE.registerMessage(BlockMidiReadThreadPacketHandler.class, BlockMidiReadThreadPacket.class, 3, Side.SERVER);
 	 }	 
 	    
 }

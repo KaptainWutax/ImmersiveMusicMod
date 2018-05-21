@@ -1,9 +1,9 @@
 package com.kaptainwutax.immersivemusic.util.handlers;
 
-import com.kaptainwutax.immersivemusic.objects.blocks.BlockMidi.BlockMidiGui;
-import com.kaptainwutax.immersivemusic.objects.blocks.BlockNote.BlockNote;
-import com.kaptainwutax.immersivemusic.objects.blocks.BlockNote.BlockNoteGui;
-import com.kaptainwutax.immersivemusic.objects.blocks.BlockNote.BlockNoteTileEntity;
+import com.kaptainwutax.immersivemusic.objects.blocks.blockmidi.BlockMidiGui;
+import com.kaptainwutax.immersivemusic.objects.blocks.blockmidi.BlockMidiTileEntity;
+import com.kaptainwutax.immersivemusic.objects.blocks.blocknote.BlockNoteGui;
+import com.kaptainwutax.immersivemusic.objects.blocks.blocknote.BlockNoteTileEntity;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.math.BlockPos;
@@ -34,7 +34,7 @@ public class GuiHandler implements IGuiHandler {
 		switch(ID) {
 		
 		case 0 : return new BlockNoteGui(world, (BlockNoteTileEntity) world.getTileEntity(new BlockPos(x, y, z)), new BlockPos(x, y, z));
-		case 1 : return new BlockMidiGui(new BlockPos(x, y, z));
+		case 1 : return new BlockMidiGui(world, (BlockMidiTileEntity) world.getTileEntity(new BlockPos(x, y, z)), new BlockPos(x, y, z));
 		
 		}
 		

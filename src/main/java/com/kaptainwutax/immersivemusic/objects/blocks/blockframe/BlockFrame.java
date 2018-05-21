@@ -1,4 +1,4 @@
-package com.kaptainwutax.immersivemusic.objects.blocks.BlockFrame;
+package com.kaptainwutax.immersivemusic.objects.blocks.blockframe;
 
 import java.util.Random;
 

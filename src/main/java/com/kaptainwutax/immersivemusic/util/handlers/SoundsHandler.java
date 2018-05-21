@@ -8,13 +8,28 @@ import net.minecraftforge.fml.common.registry.ForgeRegistries;
 
 public class SoundsHandler {
 
+    public static final String[] NOTE_NAMES = {"c", "c#", "d", "d#", "e", "f", "f#", "g", "g#", "a", "a#", "b"};
 	public static int instrumentsAmount = 3;
-	static int violon_staccados_id = 1; //3g to 7a
+	static int violon_staccados_id = 1; //3g to 7a / 55 to 105
+	static int piano_id = 0; //1a to 8b / 33 to 119
 	
 	public static SoundEvent[][] NOTE_SOUND = new SoundEvent[instrumentsAmount][127]; 
 	
 	public static void registerSounds() {
+		
+		for(int i = 55 ; i <= 105 ; i++) {
+			
+			NOTE_SOUND[violon_staccados_id][i] = registerSound("notes.violon_staccados." + ((i / 12) - 1) + NOTE_NAMES[(i % 12)]);
+			
+		}
+		
+		for(int i = 33 ; i <= 119 ; i++) {
+			
+			NOTE_SOUND[piano_id][i] = registerSound("notes.piano." + ((i / 12) - 1) + NOTE_NAMES[(i % 12)]);
+			
+		}
 
+		/*
 		NOTE_SOUND[violon_staccados_id][55] = registerSound("notes.violon_staccados.3g");
 		NOTE_SOUND[violon_staccados_id][56] = registerSound("notes.violon_staccados.3g#");
 		NOTE_SOUND[violon_staccados_id][57] = registerSound("notes.violon_staccados.3a");
@@ -70,6 +85,7 @@ public class SoundsHandler {
 		NOTE_SOUND[violon_staccados_id][103] = registerSound("notes.violon_staccados.7g");
 		NOTE_SOUND[violon_staccados_id][104] = registerSound("notes.violon_staccados.7g#");
 		NOTE_SOUND[violon_staccados_id][105] = registerSound("notes.violon_staccados.7a");
+		*/
 	
 	}
 	

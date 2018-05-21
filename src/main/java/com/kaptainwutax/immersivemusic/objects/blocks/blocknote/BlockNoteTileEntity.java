@@ -1,4 +1,4 @@
-package com.kaptainwutax.immersivemusic.objects.blocks.BlockNote;
+package com.kaptainwutax.immersivemusic.objects.blocks.blocknote;
 
 import javax.annotation.Nullable;
 
@@ -14,6 +14,8 @@ public class BlockNoteTileEntity extends TileEntity {
 	private int octave = 4;
 	private int noteToPlay = 60;
 	private int instrumentToPlay = 0;
+	private float volume = 1F;
+	private boolean previousRedstoneState = false;
 	
 	@Override
 	public NBTTagCompound writeToNBT(NBTTagCompound compound) {
@@ -23,6 +25,8 @@ public class BlockNoteTileEntity extends TileEntity {
 		compound.setInteger("octave", octave);
 		compound.setInteger("noteToPlay", noteToPlay);
 		compound.setInteger("instrumentToPlay", instrumentToPlay);
+		compound.setFloat("volume", volume);
+		compound.setBoolean("powered", previousRedstoneState);
 		return compound;
 		
 	}
@@ -31,10 +35,13 @@ public class BlockNoteTileEntity extends TileEntity {
 	public void readFromNBT(NBTTagCompound compound) {
 
 		super.readFromNBT(compound);
-		this.note = compound.getInteger("note");
-		this.octave = compound.getInteger("octave");
-		this.noteToPlay = compound.getInteger("noteToPlay");
-		this.instrumentToPlay = compound.getInteger("instrumentToPlay");
+		note = compound.getInteger("note");
+		octave = compound.getInteger("octave");
+		noteToPlay = compound.getInteger("noteToPlay");
+		instrumentToPlay = compound.getInteger("instrumentToPlay");
+		volume = compound.getFloat("volume");
+		previousRedstoneState = compound.getBoolean("powered");
+		
 		
 	}
 	
@@ -96,6 +103,20 @@ public class BlockNoteTileEntity extends TileEntity {
     	markForUpdate();
     }
     
+   public void setVolume(float evolume) {
+    	
+    	volume = evolume;
+    	//markDirty();
+    	markForUpdate();
+    }
+    
+    public void setPowered(Boolean epowered) {
+    	
+    	previousRedstoneState = epowered;
+    	//markDirty();
+    	markForUpdate();
+    }
+    
     //GET
     public int getNote() {
     	
@@ -118,6 +139,18 @@ public class BlockNoteTileEntity extends TileEntity {
     public int getInstrumentToPlay() {
     	
        	return instrumentToPlay;
+       	
+    }
+    
+    public float getVolume() {
+    	
+       	return volume;
+       	
+    }
+    
+   public Boolean getPowered() {
+    	
+       	return previousRedstoneState;
        	
     }
     	

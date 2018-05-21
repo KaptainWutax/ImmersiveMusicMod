@@ -3,9 +3,9 @@ package com.kaptainwutax.immersivemusic.init;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.kaptainwutax.immersivemusic.objects.blocks.BlockFrame.BlockFrame;
-import com.kaptainwutax.immersivemusic.objects.blocks.BlockMidi.BlockMidi;
-import com.kaptainwutax.immersivemusic.objects.blocks.BlockNote.BlockNote;
+import com.kaptainwutax.immersivemusic.objects.blocks.blockframe.BlockFrame;
+import com.kaptainwutax.immersivemusic.objects.blocks.blockmidi.BlockMidi;
+import com.kaptainwutax.immersivemusic.objects.blocks.blocknote.BlockNote;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;

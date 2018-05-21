@@ -1,12 +1,9 @@
-package com.kaptainwutax.immersivemusic.objects.blocks.BlockNote;
+package com.kaptainwutax.immersivemusic.objects.blocks.blocknote;
 
-import com.kaptainwutax.immersivemusic.objects.blocks.BlockNote.BlockNotePacket;
-import com.kaptainwutax.immersivemusic.objects.blocks.BlockNote.BlockNoteTileEntity;
 import com.kaptainwutax.immersivemusic.util.handlers.SoundsHandler;
 
 import io.netty.buffer.ByteBuf;
 import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.WorldServer;
@@ -20,16 +17,18 @@ public class BlockNotePacket implements IMessage {
 	int octave;
 	int noteToPlay;
 	int instrumentToPlay;
+	float volume;
 	BlockPos pos;
 	Boolean playSound;
 
 	public BlockNotePacket() {}
-	public BlockNotePacket(int note, int octave, int noteToPlay, int instrumentToPlay, BlockPos pos, Boolean playSound) {
+	public BlockNotePacket(int note, int octave, int noteToPlay, int instrumentToPlay, float volume, BlockPos pos, Boolean playSound) {
 		
 		this.note = note;
 		this.octave = octave;
 		this.noteToPlay = noteToPlay;
 		this.instrumentToPlay = instrumentToPlay;
+		this.volume = volume;
 		this.pos = pos;
 		this.playSound = playSound;
 		
@@ -42,6 +41,7 @@ public class BlockNotePacket implements IMessage {
 		octave = buf.readInt();
 		noteToPlay = buf.readInt();
 		instrumentToPlay = buf.readInt();
+		volume = buf.readFloat();
 		pos = new BlockPos(buf.readInt(), buf.readInt(), buf.readInt());
 		playSound = buf.readBoolean();
 		
@@ -53,7 +53,8 @@ public class BlockNotePacket implements IMessage {
         buf.writeInt(note);
         buf.writeInt(octave);
         buf.writeInt(noteToPlay);
-        buf.writeInt(instrumentToPlay);  	
+        buf.writeInt(instrumentToPlay);  
+        buf.writeFloat(volume);
 		buf.writeInt(pos.getX());
         buf.writeInt(pos.getY());
         buf.writeInt(pos.getZ());
@@ -76,7 +77,8 @@ public class BlockNotePacket implements IMessage {
 					TE.setOctave(message.octave);
 					TE.setNoteToPlay(message.noteToPlay);
 					TE.setInstrumentToPlay(message.instrumentToPlay);	
-					if(message.playSound) {world.playSound(message.pos.getX(), message.pos.getY(), message.pos.getZ(), SoundsHandler.NOTE_SOUND[TE.getInstrumentToPlay()][TE.getNoteToPlay()], SoundCategory.BLOCKS, 1F, 1F, false);}
+					TE.setVolume(message.volume);
+					if(message.playSound && SoundsHandler.NOTE_SOUND[TE.getInstrumentToPlay()][TE.getNoteToPlay()] != null) {world.playSound(message.pos.getX(), message.pos.getY(), message.pos.getZ(), SoundsHandler.NOTE_SOUND[TE.getInstrumentToPlay()][TE.getNoteToPlay()], SoundCategory.RECORDS, message.volume, 1F, false);}
 				});
 			return null;
 			

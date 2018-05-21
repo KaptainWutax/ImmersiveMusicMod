@@ -3,11 +3,11 @@ package com.kaptainwutax.immersivemusic.util.handlers;
 import com.kaptainwutax.immersivemusic.ImmersiveMusic;
 import com.kaptainwutax.immersivemusic.init.BlockInit;
 import com.kaptainwutax.immersivemusic.init.ItemInit;
-import com.kaptainwutax.immersivemusic.objects.blocks.BlockNote.BlockNoteTileEntity;
+import com.kaptainwutax.immersivemusic.objects.blocks.blockmidi.BlockMidiTileEntity;
+import com.kaptainwutax.immersivemusic.objects.blocks.blocknote.BlockNoteTileEntity;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.SoundEvent;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
@@ -15,7 +15,6 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import net.minecraftforge.fml.relauncher.Side;
 
 @EventBusSubscriber
 public class RegistryHandler {
@@ -28,6 +27,7 @@ public class RegistryHandler {
 		PacketHandler.registerMessages("kwimm");
 		NetworkRegistry.INSTANCE.registerGuiHandler(ImmersiveMusic.instance, new GuiHandler());
 		GameRegistry.registerTileEntity(BlockNoteTileEntity.class, "blocknote_TE");
+		GameRegistry.registerTileEntity(BlockMidiTileEntity.class, "blockmidi_TE");
 	}
 	
 	public static void postInitRegistries() {
@@ -46,7 +46,7 @@ public class RegistryHandler {
 	}
 	
 	@SubscribeEvent
-	public static void onBlockRegister(ModelRegistryEvent event) {
+	public static void onModelRegister(ModelRegistryEvent event) {
 		ItemInit.registerModels();
 		BlockInit.registerModels();
 	}

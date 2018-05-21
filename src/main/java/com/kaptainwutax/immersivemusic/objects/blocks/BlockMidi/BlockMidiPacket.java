@@ -1,10 +1,8 @@
-package com.kaptainwutax.immersivemusic.objects.blocks.BlockMidi;
+package com.kaptainwutax.immersivemusic.objects.blocks.blockmidi;
 
 import com.kaptainwutax.immersivemusic.util.handlers.SoundsHandler;
 
 import io.netty.buffer.ByteBuf;
-import net.minecraft.client.Minecraft;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
@@ -18,13 +16,19 @@ public class BlockMidiPacket implements IMessage {
 	BlockPos pos;
 	int instrument;
 	int noteToPlay;
-
+	float volume;
+	float speed;
+	Boolean isFilePlaying;
+	
 	public BlockMidiPacket() {}
-	public BlockMidiPacket(BlockPos pos, int instrument, int noteToPlay) {
+	public BlockMidiPacket(BlockPos pos, int instrument, int noteToPlay, float volume, float speed, Boolean isFilePlaying) {
 		
 		this.pos = pos;
 		this.instrument = instrument;
 		this.noteToPlay = noteToPlay;
+		this.volume = volume;
+		this.speed = speed;
+		this.isFilePlaying = isFilePlaying;
 		
 	}
 	
@@ -34,6 +38,9 @@ public class BlockMidiPacket implements IMessage {
 		pos = new BlockPos(buf.readInt(), buf.readInt(), buf.readInt());
 		instrument = buf.readInt();
 		noteToPlay = buf.readInt();
+		volume = buf.readFloat();
+		speed = buf.readFloat();
+		isFilePlaying = buf.readBoolean();
 		
 	}
 
@@ -45,6 +52,9 @@ public class BlockMidiPacket implements IMessage {
         buf.writeInt(pos.getZ());
         buf.writeInt(instrument);
         buf.writeInt(noteToPlay);
+        buf.writeFloat(volume);
+        buf.writeFloat(speed);
+        buf.writeBoolean(isFilePlaying);
 		
 	}
 	
@@ -56,7 +66,17 @@ public class BlockMidiPacket implements IMessage {
 			EntityPlayerMP player = ctx.getServerHandler().player;
 			WorldServer world = player.getServerWorld();
 			
-			world.addScheduledTask(() -> {world.playSound(player, message.pos.getX(), message.pos.getY(), message.pos.getZ(), SoundsHandler.NOTE_SOUND[message.instrument][message.noteToPlay], SoundCategory.BLOCKS, 1F, 1F);});
+			if(world.getTileEntity(message.pos) instanceof BlockMidiTileEntity)
+			world.addScheduledTask(() -> {
+				BlockMidiTileEntity TE = (BlockMidiTileEntity)world.getTileEntity(message.pos);
+				TE.setInstrumentToPlay(message.instrument);
+				TE.setVolume(message.volume);	
+				TE.setSpeed(message.speed);
+				TE.setIsFilePlaying(message.isFilePlaying);
+				if(message.noteToPlay != 1000 && SoundsHandler.NOTE_SOUND[TE.getInstrumentToPlay()][message.noteToPlay] != null) {
+				world.playSound(player, message.pos.getX(), message.pos.getY(), message.pos.getZ(), SoundsHandler.NOTE_SOUND[message.instrument][message.noteToPlay], SoundCategory.RECORDS, message.volume, 1F);
+				}
+			});
 			return null;
 		}
 			

@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
-  "version": "${version}",
-  "mcversion": "${mcversion}",
-  "url": "",
-  "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "modid": "kwimm",
+  "name": "ImmersiveMusic",
+  "description": "A mod that enhances sounds and music!",
+  "version": "${Beta 0.3.6}",
+  "mcversion": "${1.12.2}",
+  "url": "https://github.com/KaptainWutax/ImmersiveMusicMod",
+  "updateUrl": "https://minecraft.curseforge.com/projects/immersivemusic",
+  "authorList": ["KaptainWutax"],
+  "credits": "The Forge and FML guys for giving me this chance!",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
