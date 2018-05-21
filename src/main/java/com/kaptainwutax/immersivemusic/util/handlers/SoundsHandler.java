@@ -10,8 +10,8 @@ public class SoundsHandler {
 
     public static final String[] NOTE_NAMES = {"c", "c#", "d", "d#", "e", "f", "f#", "g", "g#", "a", "a#", "b"};
 	public static int instrumentsAmount = 3;
-	static int violon_staccados_id = 1; //3g to 7a / 55 to 105
-	static int piano_id = 0; //1a to 8b / 33 to 119
+	public static int violon_staccados_id = 1; //3g to 7a / 55 to 105
+	public static int piano_id = 0; //1a to 8b / 33 to 119
 	
 	public static SoundEvent[][] NOTE_SOUND = new SoundEvent[instrumentsAmount][127]; 
 	
