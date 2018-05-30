@@ -27,7 +27,6 @@ public class SoundsHandler {
     }
 
     public static SoundEvent registerSound(String name) {
-
         ResourceLocation location = new ResourceLocation(Reference.MOD_ID, name);
         SoundEvent event = new SoundEvent(location);
         event.setRegistryName(name);
@@ -35,5 +34,4 @@ public class SoundsHandler {
         return event;
 
     }
-
 }

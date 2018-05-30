@@ -2,6 +2,7 @@ package com.kaptainwutax.immersivemusic.objects.blocks.blocknote;
 
 import com.kaptainwutax.immersivemusic.ImmersiveMusic;
 import com.kaptainwutax.immersivemusic.init.BlockInit;
+import com.kaptainwutax.immersivemusic.util.Reference;
 import com.kaptainwutax.immersivemusic.util.handlers.GuiHandler;
 import com.kaptainwutax.immersivemusic.util.handlers.SoundsHandler;
 import net.minecraft.block.Block;
@@ -37,7 +38,7 @@ public class BlockNote extends Block implements ITileEntityProvider {
         setLightLevel(0F);
         setLightOpacity(15);
         setUnlocalizedName(name);
-        setRegistryName(name);
+        setRegistryName(Reference.MOD_ID+":"+name);
         setCreativeTab(CreativeTabs.MISC);
 
     }

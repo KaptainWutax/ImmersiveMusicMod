@@ -2,6 +2,7 @@ package com.kaptainwutax.immersivemusic.objects.blocks.blockframe;
 
 import com.kaptainwutax.immersivemusic.ImmersiveMusic;
 import com.kaptainwutax.immersivemusic.init.BlockInit;
+import com.kaptainwutax.immersivemusic.util.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -29,7 +30,7 @@ public class BlockFrame extends Block {
         setLightLevel(0F);
         setLightOpacity(15);
         setUnlocalizedName(name);
-        setRegistryName(name);
+        setRegistryName(Reference.MOD_ID+":"+name);
         setCreativeTab(CreativeTabs.MISC);
 
     }
