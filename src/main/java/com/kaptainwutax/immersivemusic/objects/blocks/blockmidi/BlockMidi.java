@@ -10,7 +10,6 @@ import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -37,7 +36,7 @@ public class BlockMidi extends Block implements ITileEntityProvider {
         setLightOpacity(15);
         setUnlocalizedName(name);
         setRegistryName(Reference.MOD_ID + ":" + name);
-        setCreativeTab(CreativeTabs.MISC);
+        setCreativeTab(ImmersiveMusic.CREATIVE_TAB);
 
     }
 

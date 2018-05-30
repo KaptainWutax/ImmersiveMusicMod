@@ -7,7 +7,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
@@ -31,7 +30,7 @@ public class BlockFrame extends Block {
         setLightOpacity(15);
         setUnlocalizedName(name);
         setRegistryName(Reference.MOD_ID + ":" + name);
-        setCreativeTab(CreativeTabs.MISC);
+        setCreativeTab(ImmersiveMusic.CREATIVE_TAB);
 
     }
 
@@ -58,7 +57,6 @@ public class BlockFrame extends Block {
 
     @Override
     public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state) {
-
         return new ItemStack(BlockInit.BLOCK_FRAME);
 
     }

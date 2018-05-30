@@ -1,6 +1,7 @@
 package com.kaptainwutax.immersivemusic;
 
 import com.kaptainwutax.immersivemusic.proxy.CommonProxy;
+import com.kaptainwutax.immersivemusic.util.CreativeTab;
 import com.kaptainwutax.immersivemusic.util.Reference;
 import com.kaptainwutax.immersivemusic.util.handlers.RegistryHandler;
 import net.minecraft.nbt.NBTTagCompound;
@@ -22,6 +23,7 @@ import org.apache.logging.log4j.Logger;
 public class ImmersiveMusic {
 
     public static final int DATA_FIXER_VERSION = 1;
+    public static final CreativeTab CREATIVE_TAB = new CreativeTab();
     @Instance
     public static ImmersiveMusic instance;
     @SidedProxy(clientSide = Reference.CLIENT, serverSide = Reference.COMMON)

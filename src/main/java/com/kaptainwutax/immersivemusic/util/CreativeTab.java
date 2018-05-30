@@ -6,12 +6,17 @@ import net.minecraft.item.ItemStack;
 
 public class CreativeTab extends CreativeTabs {
 
-    public CreativeTab(String label) {
-        super(label);
+    public CreativeTab() {
+        super(Reference.MOD_ID);
     }
 
     @Override
     public ItemStack getTabIconItem() {
         return new ItemStack(BlockInit.BLOCK_FRAME);
+    }
+
+    @Override
+    public boolean hasSearchBar() {
+        return true;
     }
 }
