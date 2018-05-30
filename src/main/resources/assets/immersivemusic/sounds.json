@@ -1,0 +1,1106 @@
+{
+  "notes.piano.1a": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/1a"
+      }
+    ]
+  },
+  "notes.piano.1a#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/1a#"
+      }
+    ]
+  },
+  "notes.piano.1b": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/1b"
+      }
+    ]
+  },
+  "notes.piano.2c": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/2c"
+      }
+    ]
+  },
+  "notes.piano.2c#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/2c#"
+      }
+    ]
+  },
+  "notes.piano.2d": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/2d"
+      }
+    ]
+  },
+  "notes.piano.2d#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/2d#"
+      }
+    ]
+  },
+  "notes.piano.2e": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/2e"
+      }
+    ]
+  },
+  "notes.piano.2f": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/2f"
+      }
+    ]
+  },
+  "notes.piano.2f#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/2f#"
+      }
+    ]
+  },
+  "notes.piano.2g": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/2g"
+      }
+    ]
+  },
+  "notes.piano.2g#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/2g#"
+      }
+    ]
+  },
+  "notes.piano.2a": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/2a"
+      }
+    ]
+  },
+  "notes.piano.2a#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/2a#"
+      }
+    ]
+  },
+  "notes.piano.2b": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/2b"
+      }
+    ]
+  },
+  "notes.piano.3c": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/3c"
+      }
+    ]
+  },
+  "notes.piano.3c#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/3c#"
+      }
+    ]
+  },
+  "notes.piano.3d": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/3d"
+      }
+    ]
+  },
+  "notes.piano.3d#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/3d#"
+      }
+    ]
+  },
+  "notes.piano.3e": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/3e"
+      }
+    ]
+  },
+  "notes.piano.3f": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/3f"
+      }
+    ]
+  },
+  "notes.piano.3f#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/3f#"
+      }
+    ]
+  },
+  "notes.piano.3g": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/3g"
+      }
+    ]
+  },
+  "notes.piano.3g#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/3g#"
+      }
+    ]
+  },
+  "notes.piano.3a": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/3a"
+      }
+    ]
+  },
+  "notes.piano.3a#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/3a#"
+      }
+    ]
+  },
+  "notes.piano.3b": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/3b"
+      }
+    ]
+  },
+  "notes.piano.4c": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/4c"
+      }
+    ]
+  },
+  "notes.piano.4c#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/4c#"
+      }
+    ]
+  },
+  "notes.piano.4d": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/4d"
+      }
+    ]
+  },
+  "notes.piano.4d#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/4d#"
+      }
+    ]
+  },
+  "notes.piano.4e": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/4e"
+      }
+    ]
+  },
+  "notes.piano.4f": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/4f"
+      }
+    ]
+  },
+  "notes.piano.4f#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/4f#"
+      }
+    ]
+  },
+  "notes.piano.4g": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/4g"
+      }
+    ]
+  },
+  "notes.piano.4g#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/4g#"
+      }
+    ]
+  },
+  "notes.piano.4a": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/4a"
+      }
+    ]
+  },
+  "notes.piano.4a#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/4a#"
+      }
+    ]
+  },
+  "notes.piano.4b": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/4b"
+      }
+    ]
+  },
+  "notes.piano.5c": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/5c"
+      }
+    ]
+  },
+  "notes.piano.5c#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/5c#"
+      }
+    ]
+  },
+  "notes.piano.5d": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/5d"
+      }
+    ]
+  },
+  "notes.piano.5d#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/5d#"
+      }
+    ]
+  },
+  "notes.piano.5e": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/5e"
+      }
+    ]
+  },
+  "notes.piano.5f": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/5f"
+      }
+    ]
+  },
+  "notes.piano.5f#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/5f#"
+      }
+    ]
+  },
+  "notes.piano.5g": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/5g"
+      }
+    ]
+  },
+  "notes.piano.5g#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/5g#"
+      }
+    ]
+  },
+  "notes.piano.5a": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/5a"
+      }
+    ]
+  },
+  "notes.piano.5a#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/5a#"
+      }
+    ]
+  },
+  "notes.piano.5b": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/5b"
+      }
+    ]
+  },
+  "notes.piano.6c": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/6c"
+      }
+    ]
+  },
+  "notes.piano.6c#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/6c#"
+      }
+    ]
+  },
+  "notes.piano.6d": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/6d"
+      }
+    ]
+  },
+  "notes.piano.6d#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/6d#"
+      }
+    ]
+  },
+  "notes.piano.6e": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/6e"
+      }
+    ]
+  },
+  "notes.piano.6f": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/6f"
+      }
+    ]
+  },
+  "notes.piano.6f#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/6f#"
+      }
+    ]
+  },
+  "notes.piano.6g": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/6g"
+      }
+    ]
+  },
+  "notes.piano.6g#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/6g#"
+      }
+    ]
+  },
+  "notes.piano.6a": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/6a"
+      }
+    ]
+  },
+  "notes.piano.6a#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/6a#"
+      }
+    ]
+  },
+  "notes.piano.6b": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/6b"
+      }
+    ]
+  },
+  "notes.piano.7c": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/7c"
+      }
+    ]
+  },
+  "notes.piano.7c#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/7c#"
+      }
+    ]
+  },
+  "notes.piano.7d": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/7d"
+      }
+    ]
+  },
+  "notes.piano.7d#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/7d#"
+      }
+    ]
+  },
+  "notes.piano.7e": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/7e"
+      }
+    ]
+  },
+  "notes.piano.7f": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/7f"
+      }
+    ]
+  },
+  "notes.piano.7f#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/7f#"
+      }
+    ]
+  },
+  "notes.piano.7g": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/7g"
+      }
+    ]
+  },
+  "notes.piano.7g#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/7g#"
+      }
+    ]
+  },
+  "notes.piano.7a": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/7a"
+      }
+    ]
+  },
+  "notes.piano.7a#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/7a#"
+      }
+    ]
+  },
+  "notes.piano.7b": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/7b"
+      }
+    ]
+  },
+  "notes.piano.8c": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/8c"
+      }
+    ]
+  },
+  "notes.piano.8c#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/8c#"
+      }
+    ]
+  },
+  "notes.piano.8d": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/8d"
+      }
+    ]
+  },
+  "notes.piano.8d#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/8d#"
+      }
+    ]
+  },
+  "notes.piano.8e": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/8e"
+      }
+    ]
+  },
+  "notes.piano.8f": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/8f"
+      }
+    ]
+  },
+  "notes.piano.8f#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/8f#"
+      }
+    ]
+  },
+  "notes.piano.8g": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/8g"
+      }
+    ]
+  },
+  "notes.piano.8g#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/8g#"
+      }
+    ]
+  },
+  "notes.piano.8a": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/8a"
+      }
+    ]
+  },
+  "notes.piano.8a#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/8a#"
+      }
+    ]
+  },
+  "notes.piano.8b": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/piano/8b"
+      }
+    ]
+  },
+  "notes.violon_staccados.3g": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/3g"
+      }
+    ]
+  },
+  "notes.violon_staccados.3g#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/3g#"
+      }
+    ]
+  },
+  "notes.violon_staccados.3a": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/3a"
+      }
+    ]
+  },
+  "notes.violon_staccados.3a#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/3a#"
+      }
+    ]
+  },
+  "notes.violon_staccados.3b": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/3b"
+      }
+    ]
+  },
+  "notes.violon_staccados.4c": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/4c"
+      }
+    ]
+  },
+  "notes.violon_staccados.4c#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/4c#"
+      }
+    ]
+  },
+  "notes.violon_staccados.4d": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/4d"
+      }
+    ]
+  },
+  "notes.violon_staccados.4d#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/4d#"
+      }
+    ]
+  },
+  "notes.violon_staccados.4e": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/4e"
+      }
+    ]
+  },
+  "notes.violon_staccados.4f": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/4f"
+      }
+    ]
+  },
+  "notes.violon_staccados.4f#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/4f#"
+      }
+    ]
+  },
+  "notes.violon_staccados.4g": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/4g"
+      }
+    ]
+  },
+  "notes.violon_staccados.4g#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/4g#"
+      }
+    ]
+  },
+  "notes.violon_staccados.4a": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/4a"
+      }
+    ]
+  },
+  "notes.violon_staccados.4a#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/4a#"
+      }
+    ]
+  },
+  "notes.violon_staccados.4b": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/4b"
+      }
+    ]
+  },
+  "notes.violon_staccados.5c": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/5c"
+      }
+    ]
+  },
+  "notes.violon_staccados.5c#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/5c#"
+      }
+    ]
+  },
+  "notes.violon_staccados.5d": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/5d"
+      }
+    ]
+  },
+  "notes.violon_staccados.5d#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/5d#"
+      }
+    ]
+  },
+  "notes.violon_staccados.5e": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/5e"
+      }
+    ]
+  },
+  "notes.violon_staccados.5f": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/5f"
+      }
+    ]
+  },
+  "notes.violon_staccados.5f#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/5f#"
+      }
+    ]
+  },
+  "notes.violon_staccados.5g": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/5g"
+      }
+    ]
+  },
+  "notes.violon_staccados.5g#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/5g#"
+      }
+    ]
+  },
+  "notes.violon_staccados.5a": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/5a"
+      }
+    ]
+  },
+  "notes.violon_staccados.5a#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/5a#"
+      }
+    ]
+  },
+  "notes.violon_staccados.5b": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/5b"
+      }
+    ]
+  },
+  "notes.violon_staccados.6c": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/6c"
+      }
+    ]
+  },
+  "notes.violon_staccados.6c#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/6c#"
+      }
+    ]
+  },
+  "notes.violon_staccados.6d": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/6d"
+      }
+    ]
+  },
+  "notes.violon_staccados.6d#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/6d#"
+      }
+    ]
+  },
+  "notes.violon_staccados.6e": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/6e"
+      }
+    ]
+  },
+  "notes.violon_staccados.6f": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/6f"
+      }
+    ]
+  },
+  "notes.violon_staccados.6f#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/6f#"
+      }
+    ]
+  },
+  "notes.violon_staccados.6g": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/6g"
+      }
+    ]
+  },
+  "notes.violon_staccados.6g#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/6g#"
+      }
+    ]
+  },
+  "notes.violon_staccados.6a": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/6a"
+      }
+    ]
+  },
+  "notes.violon_staccados.6a#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/6a#"
+      }
+    ]
+  },
+  "notes.violon_staccados.6b": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/6b"
+      }
+    ]
+  },
+  "notes.violon_staccados.7c": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/7c"
+      }
+    ]
+  },
+  "notes.violon_staccados.7c#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/7c#"
+      }
+    ]
+  },
+  "notes.violon_staccados.7d": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/7d"
+      }
+    ]
+  },
+  "notes.violon_staccados.7d#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/7d#"
+      }
+    ]
+  },
+  "notes.violon_staccados.7e": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/7e"
+      }
+    ]
+  },
+  "notes.violon_staccados.7f": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/7f"
+      }
+    ]
+  },
+  "notes.violon_staccados.7f#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/7f#"
+      }
+    ]
+  },
+  "notes.violon_staccados.7g": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/7g"
+      }
+    ]
+  },
+  "notes.violon_staccados.7g#": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/7g#"
+      }
+    ]
+  },
+  "notes.violon_staccados.7a": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "immersivemusic:notes/violon_staccados/7a"
+      }
+    ]
+  }
+}

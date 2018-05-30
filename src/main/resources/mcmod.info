@@ -1,16 +1,18 @@
 [
-{
-  "modid": "kwimm",
-  "name": "ImmersiveMusic",
-  "description": "A mod that enhances sounds and music!",
-  "version": "{version}",
-  "mcversion": "{mcversion}",
-  "url": "https://github.com/KaptainWutax/ImmersiveMusicMod",
-  "updateUrl": "https://minecraft.curseforge.com/projects/immersivemusic",
-  "authorList": ["KaptainWutax"],
-  "credits": "The Forge and FML guys for giving me this chance!",
-  "logoFile": "",
-  "screenshots": [],
-  "dependencies": []
-}
+  {
+    "modid": "immersivemusic",
+    "name": "ImmersiveMusic",
+    "description": "A mod that enhances sounds and music!",
+    "version": "{version}",
+    "mcversion": "{mcversion}",
+    "url": "https://github.com/KaptainWutax/ImmersiveMusicMod",
+    "updateUrl": "https://minecraft.curseforge.com/projects/immersivemusic",
+    "authorList": [
+      "KaptainWutax"
+    ],
+    "credits": "The Forge and FML guys for giving me this chance!",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
 ]

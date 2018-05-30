@@ -1,0 +1,12 @@
+{
+  "parent": "block/orientable",
+  "textures": {
+    "up": "immersivemusic:blocks/block_frame",
+    "down": "immersivemusic:blocks/block_frame",
+    "north": "immersivemusic:blocks/block_midi_front",
+    "south": "immersivemusic:blocks/block_midi_front",
+    "east": "immersivemusic:blocks/block_midi_front",
+    "west": "immersivemusic:blocks/block_midi_front",
+    "particle": "immersivemusic:blocks/block_frame"
+  }
+}

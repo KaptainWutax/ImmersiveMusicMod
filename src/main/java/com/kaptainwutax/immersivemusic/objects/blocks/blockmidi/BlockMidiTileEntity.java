@@ -75,12 +75,24 @@ public class BlockMidiTileEntity extends TileEntity {
         markDirty();
     }
 
+    //GET
+    public int getInstrumentToPlay() {
+
+        return instrumentToPlay;
+
+    }
 
     //SET
     public void setInstrumentToPlay(int einstrumentToPlay) {
 
         instrumentToPlay = einstrumentToPlay;
         markForUpdate();
+
+    }
+
+    public float getVolume() {
+
+        return volume;
 
     }
 
@@ -91,10 +103,22 @@ public class BlockMidiTileEntity extends TileEntity {
 
     }
 
+    public float getSpeed() {
+
+        return speed;
+
+    }
+
     public void setSpeed(float espeed) {
 
         speed = espeed;
         markForUpdate();
+
+    }
+
+    public Boolean getPowered() {
+
+        return previousRedstoneState;
 
     }
 
@@ -105,10 +129,22 @@ public class BlockMidiTileEntity extends TileEntity {
 
     }
 
+    public int[] getFile() {
+
+        return file;
+
+    }
+
     public void setFile(int[] efile) {
 
         file = efile;
         markForUpdate();
+
+    }
+
+    public String getFileName() {
+
+        return fileName;
 
     }
 
@@ -119,53 +155,16 @@ public class BlockMidiTileEntity extends TileEntity {
 
     }
 
+    public Boolean getIsFilePlaying() {
+
+        return isFilePlaying;
+
+    }
+
     public void setIsFilePlaying(Boolean eisFilePlaying) {
 
         isFilePlaying = eisFilePlaying;
         markForUpdate();
-
-    }
-
-    //GET  
-    public int getInstrumentToPlay() {
-
-        return instrumentToPlay;
-
-    }
-
-    public float getVolume() {
-
-        return volume;
-
-    }
-
-    public float getSpeed() {
-
-        return speed;
-
-    }
-
-    public Boolean getPowered() {
-
-        return previousRedstoneState;
-
-    }
-
-    public int[] getFile() {
-
-        return file;
-
-    }
-
-    public String getFileName() {
-
-        return fileName;
-
-    }
-
-    public Boolean getIsFilePlaying() {
-
-        return isFilePlaying;
 
     }
 

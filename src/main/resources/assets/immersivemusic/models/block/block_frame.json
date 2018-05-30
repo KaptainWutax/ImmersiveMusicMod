@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "immersivemusic:blocks/block_frame"
+  }
+}

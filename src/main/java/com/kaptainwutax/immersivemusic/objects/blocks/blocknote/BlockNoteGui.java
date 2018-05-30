@@ -17,33 +17,42 @@ import java.io.IOException;
 
 public class BlockNoteGui extends GuiScreen {
 
-    private BlockNoteTileEntity TE;
-    private BlockPos blockPos;
-    private World world;
-
-    public BlockNoteGui(World world, BlockNoteTileEntity te, BlockPos blockPos) {
-
-        this.TE = te;
-        this.blockPos = blockPos;
-        this.world = world;
-
-    }
-
+    final int BUTTON_C = 0;
+    final int BUTTON_C_ = 1;
+    final int BUTTON_D = 2;
+    final int BUTTON_D_ = 3;
+    final int BUTTON_E = 4;
+    final int BUTTON_F = 5;
+    final int BUTTON_F_ = 6;
+    final int BUTTON_G = 7;
+    final int BUTTON_G_ = 8;
+    final int BUTTON_A = 9;
+    final int BUTTON_A_ = 10;
+    final int BUTTON_B = 11;
+    final int OCTAVE_1_ = 128;
+    final int OCTAVE_0 = 129;
+    final int OCTAVE_1 = 130;
+    final int OCTAVE_2 = 131;
+    final int OCTAVE_3 = 132;
+    final int OCTAVE_4 = 133;
+    final int OCTAVE_5 = 134;
+    final int OCTAVE_6 = 135;
+    final int OCTAVE_7 = 136;
+    final int OCTAVE_8 = 137;
+    final int INSTRUMENT = 12;
+    final int INSTRUMENT_DECREMENT = 13;
+    final int INSTRUMENT_INCREMENT = 14;
     public Info[] devices;
+    public boolean devicesOpen = false;
     MidiDevice output;
     Receiver rcvr = new MyReceiver();
-
-    public boolean devicesOpen = false;
-
     int note;
     int octave;
     int noteToPlay;
     int instrumentToPlay;
     float volume;
-
     int noteButtonWidth = 20;
     int noteButtonHeight = 20;
-
     //notes
     GuiButton button_c;
     GuiButton button_c_;
@@ -57,20 +66,6 @@ public class BlockNoteGui extends GuiScreen {
     GuiButton button_a;
     GuiButton button_a_;
     GuiButton button_b;
-
-    final int BUTTON_C = 0;
-    final int BUTTON_C_ = 1;
-    final int BUTTON_D = 2;
-    final int BUTTON_D_ = 3;
-    final int BUTTON_E = 4;
-    final int BUTTON_F = 5;
-    final int BUTTON_F_ = 6;
-    final int BUTTON_G = 7;
-    final int BUTTON_G_ = 8;
-    final int BUTTON_A = 9;
-    final int BUTTON_A_ = 10;
-    final int BUTTON_B = 11;
-
     //octaves
     GuiButton octave_1_;
     GuiButton octave_0;
@@ -82,35 +77,27 @@ public class BlockNoteGui extends GuiScreen {
     GuiButton octave_6;
     GuiButton octave_7;
     GuiButton octave_8;
-
-    final int OCTAVE_1_ = 128;
-    final int OCTAVE_0 = 129;
-    final int OCTAVE_1 = 130;
-    final int OCTAVE_2 = 131;
-    final int OCTAVE_3 = 132;
-    final int OCTAVE_4 = 133;
-    final int OCTAVE_5 = 134;
-    final int OCTAVE_6 = 135;
-    final int OCTAVE_7 = 136;
-    final int OCTAVE_8 = 137;
-
     //instruments
     GuiButton instrument;
     GuiButton instrument_increment;
     GuiButton instrument_decrement;
-
     //texts
     String instrumentText = "Loading...";
     String noteText = "4C";
     String noteToPlayText = "60";
     String statusText = "Not Available";
-
-
-    final int INSTRUMENT = 12;
-    final int INSTRUMENT_DECREMENT = 13;
-    final int INSTRUMENT_INCREMENT = 14;
-
     GuiSlider volume_slider;
+    private BlockNoteTileEntity TE;
+    private BlockPos blockPos;
+    private World world;
+
+    public BlockNoteGui(World world, BlockNoteTileEntity te, BlockPos blockPos) {
+
+        this.TE = te;
+        this.blockPos = blockPos;
+        this.world = world;
+
+    }
 
     @Override
     public void drawScreen(int mouseX, int mouseY, float partialTicks) {

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BCB",
+    "CAC",
+    "BCB"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:noteblock"
+    },
+    "B": {
+      "item": "immersivemusic:block_frame"
+    },
+    "C": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "result": {
+    "item": "immersivemusic:block_note",
+    "count": 1
+  }
+}

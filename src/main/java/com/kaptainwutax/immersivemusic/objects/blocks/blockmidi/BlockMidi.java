@@ -36,7 +36,7 @@ public class BlockMidi extends Block implements ITileEntityProvider {
         setLightLevel(0F);
         setLightOpacity(15);
         setUnlocalizedName(name);
-        setRegistryName(Reference.MOD_ID+":"+name);
+        setRegistryName(Reference.MOD_ID + ":" + name);
         setCreativeTab(CreativeTabs.MISC);
 
     }

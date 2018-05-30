@@ -73,12 +73,25 @@ public class BlockNoteTileEntity extends TileEntity {
         markDirty();
     }
 
+    //GET
+    public int getNote() {
+
+        return note;
+
+    }
+
     //SET
     public void setNote(int enote) {
 
         note = enote;
         //markDirty();
         markForUpdate();
+
+    }
+
+    public int getNoteToPlay() {
+
+        return noteToPlay;
 
     }
 
@@ -89,11 +102,23 @@ public class BlockNoteTileEntity extends TileEntity {
         markForUpdate();
     }
 
+    public int getOctave() {
+
+        return octave;
+
+    }
+
     public void setOctave(int eoctave) {
 
         octave = eoctave;
         //markDirty();
         markForUpdate();
+    }
+
+    public int getInstrumentToPlay() {
+
+        return instrumentToPlay;
+
     }
 
     public void setInstrumentToPlay(int einstrumentToPlay) {
@@ -103,6 +128,12 @@ public class BlockNoteTileEntity extends TileEntity {
         markForUpdate();
     }
 
+    public float getVolume() {
+
+        return volume;
+
+    }
+
     public void setVolume(float evolume) {
 
         volume = evolume;
@@ -110,48 +141,17 @@ public class BlockNoteTileEntity extends TileEntity {
         markForUpdate();
     }
 
+    public Boolean getPowered() {
+
+        return previousRedstoneState;
+
+    }
+
     public void setPowered(Boolean epowered) {
 
         previousRedstoneState = epowered;
         //markDirty();
         markForUpdate();
-    }
-
-    //GET
-    public int getNote() {
-
-        return note;
-
-    }
-
-    public int getNoteToPlay() {
-
-        return noteToPlay;
-
-    }
-
-    public int getOctave() {
-
-        return octave;
-
-    }
-
-    public int getInstrumentToPlay() {
-
-        return instrumentToPlay;
-
-    }
-
-    public float getVolume() {
-
-        return volume;
-
-    }
-
-    public Boolean getPowered() {
-
-        return previousRedstoneState;
-
     }
 
 }

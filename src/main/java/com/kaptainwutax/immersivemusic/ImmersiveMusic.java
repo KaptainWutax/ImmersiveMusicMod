@@ -21,13 +21,12 @@ import org.apache.logging.log4j.Logger;
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION)
 public class ImmersiveMusic {
 
+    public static final int DATA_FIXER_VERSION = 1;
     @Instance
     public static ImmersiveMusic instance;
-
     @SidedProxy(clientSide = Reference.CLIENT, serverSide = Reference.COMMON)
     public static CommonProxy proxy;
     public static Logger logger;
-    public static final int DATA_FIXER_VERSION = 1;
 
     @EventHandler
     public static void preInit(FMLPreInitializationEvent event) {

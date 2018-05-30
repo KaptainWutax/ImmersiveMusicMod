@@ -18,6 +18,37 @@ import java.io.IOException;
 
 public class BlockMidiGui extends GuiScreen {
 
+    final int DEVICE_1 = 1;
+    final int DEVICE_2 = 2;
+    final int DEVICE_3 = 3;
+    final int DEVICE_4 = 4;
+    final int DEVICE_5 = 5;
+    final int DEVICE_6 = 6;
+    final int DEVICE_7 = 7;
+    final int DEVICE_8 = 8;
+    final int DEVICE_9 = 9;
+    final int DEVICE_10 = 10;
+    final int INSTRUMENT = 100;
+    final int INSTRUMENT_DECREMENT = 13;
+    final int INSTRUMENT_INCREMENT = 14;
+    public Info[] devices;
+    MidiDevice output;
+    Receiver rcvr = new MyReceiver();
+    boolean devicesOpen = false;
+    boolean filePlaying = false;
+    int noteToPlay;
+    int instrumentToPlay;
+    float volume;
+    float speed;
+    Boolean isFilePlaying;
+    String instrumentText = "Loading...";
+    String fileNameText;
+    GuiButton instrument;
+    GuiButton instrument_increment;
+    GuiButton instrument_decrement;
+    GuiSlider volume_slider;
+    GuiSlider speed_slider;
+    GuiTextField text;
     private BlockMidiTileEntity TE;
     private BlockPos blockPos;
     private World world;
@@ -29,46 +60,6 @@ public class BlockMidiGui extends GuiScreen {
         this.blockPos = blockPos;
 
     }
-
-    public Info[] devices;
-    MidiDevice output;
-    Receiver rcvr = new MyReceiver();
-
-    boolean devicesOpen = false;
-    boolean filePlaying = false;
-
-    int noteToPlay;
-    int instrumentToPlay;
-    float volume;
-    float speed;
-    Boolean isFilePlaying;
-
-    final int DEVICE_1 = 1;
-    final int DEVICE_2 = 2;
-    final int DEVICE_3 = 3;
-    final int DEVICE_4 = 4;
-    final int DEVICE_5 = 5;
-    final int DEVICE_6 = 6;
-    final int DEVICE_7 = 7;
-    final int DEVICE_8 = 8;
-    final int DEVICE_9 = 9;
-    final int DEVICE_10 = 10;
-
-    String instrumentText = "Loading...";
-    String fileNameText;
-
-    GuiButton instrument;
-    GuiButton instrument_increment;
-    GuiButton instrument_decrement;
-
-    final int INSTRUMENT = 100;
-    final int INSTRUMENT_DECREMENT = 13;
-    final int INSTRUMENT_INCREMENT = 14;
-
-    GuiSlider volume_slider;
-    GuiSlider speed_slider;
-
-    GuiTextField text;
 
     @Override
     public void drawScreen(int mouseX, int mouseY, float partialTicks) {
